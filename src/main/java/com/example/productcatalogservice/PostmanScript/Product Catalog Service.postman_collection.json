@@ -23,13 +23,78 @@
 				"url": {
 					"raw": "http://localhost:8080/products",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "8080",
-					"path": [
-						"products"
-					]
+					"path": ["products"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["products"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/2",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["products", "2"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"iPhone 15 Pro\",\n  \"description\": \"Updated description with titanium body\",\n  \"imageUrl\": \"https://example.com/images/iphone15pro.jpg\",\n  \"price\": 89999.99,\n  \"category\": {\n    \"id\": 1\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["products", "1"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/2",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["products", "2"]
 				}
 			},
 			"response": []
